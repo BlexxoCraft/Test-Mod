@@ -1,6 +1,7 @@
 package net.blexxocraft.testmod;
 
 import com.mojang.logging.LogUtils;
+import net.blexxocraft.testmod.block.ModBlocks;
 import net.blexxocraft.testmod.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -33,6 +34,7 @@ public class TestMod
         eventBus.addListener(this::setup);
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
