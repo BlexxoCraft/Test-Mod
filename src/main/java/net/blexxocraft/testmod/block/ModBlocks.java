@@ -1,5 +1,6 @@
 package net.blexxocraft.testmod.block;
 
+
 import net.blexxocraft.testmod.TestMod;
 import net.blexxocraft.testmod.item.ModCreativeModeTab;
 import net.blexxocraft.testmod.item.ModItems;
@@ -17,7 +18,8 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TestMod.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS =
+            DeferredRegister.create(ForgeRegistries.BLOCKS, TestMod.MOD_ID);
 
     public static final RegistryObject<Block> CITRINE_BLOCK = registerBlock("citrine_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
@@ -33,15 +35,15 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DEEPSLATE_CITRINE_ORE = registerBlock("deepslate_citrine_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(7f).requiresCorrectToolForDrops()), ModCreativeModeTab.TESTMOD_TAB);
+    public static final RegistryObject<Block> NETHERRACK_CITRINE_ORE = registerBlock("netherrack_citrine_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.TESTMOD_TAB);
-
     public static final RegistryObject<Block> ENDSTONE_CITRINE_ORE = registerBlock("endstone_citrine_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.TESTMOD_TAB);
 
-    public static final RegistryObject<Block> NETHERRACK_CITRINE_ORE = registerBlock("netherrack_citrine_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.TESTMOD_TAB);
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
@@ -50,12 +52,13 @@ public class ModBlocks {
         return toReturn;
     }
 
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
+                                                                            CreativeModeTab tab) {
+        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().tab(tab)));
     }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
 }
-
