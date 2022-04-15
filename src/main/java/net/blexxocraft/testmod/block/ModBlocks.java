@@ -2,6 +2,7 @@ package net.blexxocraft.testmod.block;
 
 
 import net.blexxocraft.testmod.TestMod;
+import net.blexxocraft.testmod.block.custom.SpeedyBlock;
 import net.blexxocraft.testmod.item.ModCreativeModeTab;
 import net.blexxocraft.testmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -43,6 +44,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.TESTMOD_TAB);
 
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.TESTMOD_TAB);
 
 
 
