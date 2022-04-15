@@ -15,6 +15,9 @@
 
   "itemGroup.testmod": "Test Mod",
 
-  "item.testmod.dowsing_rod.no_valuables": "No Valuables Found!"
+  "item.testmod.dowsing_rod.no_valuables": "No Valuables Found!",
+  "tooltip.testmod.dowsing_rod.tooltip.shift": "Right Click to find Valuables!",
+  "tooltip.testmod.dowsing_rod.tooltip": "Press §eSHIFT§r for more Information!",
+  "tooltip.testmod.block.speedy_block": "I am speed!"
 
 }
