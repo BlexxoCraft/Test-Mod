@@ -19,7 +19,7 @@ public class SpeedyBlock extends Block {
         if (!pLevel.isClientSide()) {
             if (pEntity instanceof LivingEntity) {
                 LivingEntity livingEntity = ((LivingEntity) pEntity);
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300, 1, false, false));
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300, 0, false, false));
             }
         }
 
