@@ -4,6 +4,7 @@ import net.blexxocraft.testmod.TestMod;
 import net.blexxocraft.testmod.item.custom.CoalCokeItem;
 import net.blexxocraft.testmod.item.custom.DowsingRodItem;
 import net.blexxocraft.testmod.item.custom.LevitationSwordItem;
+import net.blexxocraft.testmod.item.custom.ModArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -42,7 +43,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.TESTMOD_TAB)));
 
     public static final RegistryObject<Item> CITRINE_HELMET = ITEMS.register("citrine_helmet",
-            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
+            () -> new ModArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.TESTMOD_TAB)));
     public static final RegistryObject<Item> CITRINE_CHESTPLATE = ITEMS.register("citrine_chestplate",
             () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.CHEST,
