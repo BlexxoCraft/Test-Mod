@@ -18,6 +18,10 @@
   "block.testmod.citrine_fence": "Citrine Fence",
   "block.testmod.citrine_wall": "Citrine Wall",
   "block.testmod.citrine_fence_gate": "Citrine Fence Gate",
+  "block.testmod.citrine_button": "Citrine Button",
+  "block.testmod.citrine_pressure_plate": "Citrine Pressure Plate",
+  "block.testmod.ebony_door": "Ebony Door",
+  "block.testmod.ebony_trapdoor": "Ebony Trapdoor",
 
   "itemGroup.testmod": "Test Mod",
 
